@@ -1,7 +1,7 @@
 TravelAgency
 ---
 
-Technology used:
+Technologies used:
 - Angular
 - Typescript
 - HTML
