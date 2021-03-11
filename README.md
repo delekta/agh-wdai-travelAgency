@@ -17,7 +17,6 @@ On main page you can choose interesting you filters like location,
 rating, price range which works simultaneously (Angular Custom Pipes)
 
 ![Filters](readmeFiles/filters.png)
-![Using Filters](readmeFiles/filters.png)
 
 But let's start from the beginning to use my website firstly you must sign up.
 
