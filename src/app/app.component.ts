@@ -13,7 +13,7 @@ import { UserService } from './user/user.service';
 export class AppComponent {
   public companyName = "Tu i Tam...";
   public userName: string;
-  public userRole: number = 0;
+  public userRole: number = 0; 
   constructor(private _currentUser: UserInteractionService, private _authenticationService: AuthService, private userService: UserService){
     this._currentUser.user$.subscribe(
       u => {
@@ -24,8 +24,7 @@ export class AppComponent {
           this.userName = null;
           this.userRole = 0
         }
-      }
-    )
+      })
   }
 
   signOut(){

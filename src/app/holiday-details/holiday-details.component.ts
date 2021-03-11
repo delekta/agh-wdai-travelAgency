@@ -6,6 +6,7 @@ import { Holiday } from '../holidays-offer-element/holiday';
 import { ReservedHoliday } from '../holidays-offer/reservedHoliday';
 import { HolidaysService } from '../services/holidays.service';
 import { TrolleyInteractionService } from '../services/trolley-interaction.service';
+import { UserInteractionService } from '../services/user-interaction.service';
 
 @Component({
   selector: 'app-holiday-details',
@@ -17,15 +18,34 @@ export class HolidayDetailsComponent implements OnInit {
   public rating: number;
   public placeReserved: number;
   public key: string;
+  public userRole: number = 0;
   constructor(private _interactionHolidaysService: HolidaysService, private _interactionTrolleyService: TrolleyInteractionService
-    ,private route: ActivatedRoute, private router: Router) { 
+    ,private route: ActivatedRoute, private router: Router, private _currentUser: UserInteractionService) { 
+
+    this._currentUser.user$.subscribe(
+      u => {
+        if (u != null){
+          this.userRole = u.role
+        }else{
+          this.userRole = 0
+        }
+        console.log(this.userRole);
+      })
+      
+
     this.route.params.subscribe(params => {this.key = params['key']});
-      console.log(this.key);
+    console.log(this.key);
     this.getSpecifiedHoliday(this.key);
+
+
+      
   }
 
   ngOnInit(): void {
-    // do zrobienia przycisk [Wroc]
+    if(this._currentUser.getCurrentUser() != null){
+      this.userRole = this._currentUser.getCurrentUser().role
+    }
+    
   }
 
   // Used in to rating
