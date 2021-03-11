@@ -1,0 +1,85 @@
+.top-row{
+    color: white;
+    display:grid;
+    grid-template-areas: 
+    "form filters trolley"
+    
+}
+
+.email{
+    background: #0062CC;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1020px){
+    .top-row{
+        grid-template-areas: 
+            "form  trolley"
+            "filters filters"
+        
+    }
+}
+
+@media screen and (max-width: 700px){
+    .top-row{
+        grid-template-areas: 
+            "form"
+            "trolley"
+            "filters"
+        
+    }
+}
+
+app-form{
+    grid-area: form;
+    margin: 20px;
+    background-color: rgb(123, 125, 134);
+    border-radius: 20px;
+}
+
+app-filters{
+    grid-area: filters;
+    margin: 20px;
+    background-color: rgb(123, 125, 134);
+    border-radius: 20px;
+}
+
+app-trolley{
+    grid-area: trolley;
+    margin: 20px;
+    background-color: rgb(123, 125, 134);
+    border-radius: 20px;
+}
+
+.container{
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-row{
+    min-width: 600px;
+    min-height: 300px;
+    margin: auto;
+    display: inline-block;
+    background-color: rgb(123, 125, 134, 0.5);
+    border-radius: 20px;
+}
+
+h1{
+    font-family: 'Potta One', cursive;
+}
+

@@ -1,0 +1,31 @@
+.container{
+    padding: 20px; 
+}
+
+.slider-conatiner{
+    position: relative;
+}
+
+hr{
+    border-color: white;
+}
+
+.locations{
+    grid-area: locations
+}
+.stars{
+    grid-area: stars
+}
+.prices{
+    grid-area: prices
+}
+.container2{
+    display: grid;
+    grid-template-areas:
+    "locations stars prices";
+}
+
+hr{
+    border-color: transparent;
+}
+

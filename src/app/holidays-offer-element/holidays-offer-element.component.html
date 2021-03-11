@@ -1,0 +1,38 @@
+<div class="holiday-element" [ngClass]="{'shadow-green': holiday.price == maxPrice, 'shadow-red': holiday.price == minPrice }">
+    <i class="fas fa-times-circle removeBtn" (click)="removeHolidayCard()"></i>
+    <div class="img">
+        <img [src]="holiday.imgSrc" alt="">
+    </div>
+    <div class="content">
+        <p> Nazwa: {{holiday.name | uppercase}}</p>
+        <p> Kraj: {{holiday.country | titlecase}} </p>
+        <p> Cena: {{holiday.price | currency: 'EUR'}} </p>
+        <p> Termin: {{holiday.startDate | date}} - {{holiday.endDate | date}} </p>
+        <p> Ilosc miejsc: {{holiday.maxPlaces}} </p>
+        <!-- <p> Opis: {{holiday.description}} </p> -->
+    </div>
+    <div class="bottom"> 
+        <div class="info">
+            <!-- Pomysl nad zmiana tych ifow -->
+            <p *ngIf="placeReserved == 0">
+                Zarezerwuj
+            </p>
+
+            <p *ngIf="placeReserved > 0 && placeReserved < holiday.maxPlaces">
+                Pozostało {{holiday.maxPlaces - placeReserved}} miejsc 
+            </p> 
+
+            <p *ngIf="placeReserved == holiday.maxPlaces">
+                Brak wolnych miejsc
+            </p>
+
+        </div>
+        <div class="btns">
+            <i class="fas fa-minus-square minusBtn " (click) = "cancelPlace()" [ngStyle]="{'visibility': (placeReserved == 0) ? 'hidden' : 'visible'}"></i>
+            <i class="fas fa-plus-square plusBtn" (click) = "reservePlace()" [ngStyle]="{'visibility': (placeReserved >= holiday.maxPlaces) ? 'hidden' : 'visible'}"></i>
+        </div>
+        <nav class="text-center">
+            <a routerLink='details/{{holiday.key}}' class="btn btn-primary active m-1 w-50" role="button" routerLinkActive="active">Szczegóły</a>
+        </nav>
+    </div>
+</div>

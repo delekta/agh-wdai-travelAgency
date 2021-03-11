@@ -1,0 +1,28 @@
+.all-holidays{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container{
+    width: 80vw;
+}
+
+.top{
+    height: 100px;
+    padding: 30px;
+    position: relative;
+}
+
+.sum-of-all-holidays{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 6px;
+    right: 3%;
+}
