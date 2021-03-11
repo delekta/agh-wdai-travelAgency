@@ -1,27 +1,55 @@
-# TravelAgency
+TravelAgency
+---
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
+Technology used:
+- Angular
+- Typescript
+- HTML
+- CSS
+- Firebase
 
-## Development server
+![MainPage](readmeFiles/mainPage.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##### What is Travel Agency?
+Travel Agency is website to book your dream holiday. 
 
-## Code scaffolding
+On main page you can choose interesting you filters like location,
+rating, price range which works simultaneously (Angular Custom Pipes)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Filters](readmeFiles/filters.png)
+![Using Filters](readmeFiles/filters.png)
 
-## Build
+But let's start from the beginning to use my website firstly you must sign up.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+![Signing-up](readmeFiles/signingUp.png)
 
-## Running unit tests
+Then you can log in.
+The app uses Angular Routing and AuthGuards so you can't access other components without logging in.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+![Logging-in](readmeFiles/signingIn.png)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+You can browse the tours on the main page but when something interest you, you can go to the detailed view.
 
-## Further help
+![Holidays](readmeFiles/holidays.png)
+![Detailed View](readmeFiles/detailedView.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If you book something, it immediately appears in the trolley.
+
+![Trolley](readme/trolley.png)
+
+Application differentiate 4 types of users:
+- Reader
+- VIP (can rate tours)
+- Employee (like VIP + can add new tour)
+- Admin (like Employee + have admin panel so he can update roles, change persistance mode)
+
+Navigation panel differs according user role!
+Admin views:
+
+![Admin Panel](readmeFiles/adminPanel)
+![Admin Nav](readmeFiles/adminNav)
+![Admin Form](readmeFiles/adminForm)
+
+
+
