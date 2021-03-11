@@ -49,7 +49,7 @@ Admin views:
 
 ![Admin Panel](readmeFiles/adminPanel.png)
 ![Admin Nav](readmeFiles/adminNav.png)
-![Admin Form](readmeFiles/adminForm.png)
+![Admin Form](readmeFiles/AdminForm.png)
 
 
 
