@@ -36,7 +36,7 @@ You can browse the tours on the main page but when something interest you, you c
 
 If you book something, it immediately appears in the trolley.
 
-![Trolley](readme/trolley.png)
+![Trolley](readmeFiles/trolley.png)
 
 Application differentiate 4 types of users:
 - Reader
@@ -47,9 +47,9 @@ Application differentiate 4 types of users:
 Navigation panel differs according user role!
 Admin views:
 
-![Admin Panel](readmeFiles/adminPanel)
-![Admin Nav](readmeFiles/adminNav)
-![Admin Form](readmeFiles/adminForm)
+![Admin Panel](readmeFiles/adminPanel.png)
+![Admin Nav](readmeFiles/adminNav.png)
+![Admin Form](readmeFiles/adminForm.png)
 
 
 
